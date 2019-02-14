@@ -81,14 +81,6 @@ def analyzeStream(in_stream, out_file, time_out, indices):
         ## the hash table and write to disk
         checkHashTable(hash_table, time_out, epoch, out_file)
     ## write to disk anything left over
-    for key in hash_table:
-        ip = key
-        first_epoch, last_epoch, request_count = hash_table[key]
-        ## let's get the delta epoch
-        ## convert decimal to int
-        delta_epoch = int(last_epoch - first_epoch) + 1
-        ## let's get the dates formatted properly
-        first_date = epochToDateTime(first_epoch)
-        last_date = epochToDateTime(last_epoch)
-        ## write to csv file
-        out_file.writerow([ip, first_date, last_date, delta_epoch, request_count])
+    ## trigger a flush to disk by reporting an epoch with
+    ## time_out
+    checkHashTable(hash_table, time_out, epoch+time_out+1, out_file)
