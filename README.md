@@ -8,7 +8,7 @@
 
 # Challenge
 
-Parse theEDGAR weblogs and determine how long users spend on Edgar during a visit and how many documents user requests during their sessions.
+Parse the EDGAR weblogs and determine how long users spend on Edgar during a visit and how many documents user requests during their sessions.
 
 
 # Implementation details
