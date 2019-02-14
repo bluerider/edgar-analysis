@@ -4,7 +4,7 @@
 3. [Input files](README.md#input-file)
 4. [Output file](README.md#output-file)
 5. [Running the test suite](README.md#test-suite)
-6. [Run the program](README.md#run)
+6. [Run the program](README.md#run-the-program)
 
 # Challenge
 
