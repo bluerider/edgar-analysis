@@ -43,7 +43,7 @@ def checkHashTable(hash_table, time_out, epoch, out_file):
             first_date = epochToDateTime(first_epoch)
             last_date = epochToDateTime(last_epoch)
             ## write to csv file
-            out_file.writerow([ip, first_date, last_date, request_count, delta_epoch])
+            out_file.writerow([ip, first_date, last_date, delta_epoch, request_count])
 
 
 ## analyze the data stream and sort out
@@ -91,4 +91,4 @@ def analyzeStream(in_stream, out_file, time_out, indices):
         first_date = epochToDateTime(first_epoch)
         last_date = epochToDateTime(last_epoch)
         ## write to csv file
-        out_file.writerow([ip, first_date, last_date, request_count, delta_epoch])
+        out_file.writerow([ip, first_date, last_date, delta_epoch, request_count])
