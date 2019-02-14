@@ -19,6 +19,8 @@ In addition, the tunable for session inactivity should be tuned as an integer in
 
 Sessionized analysis is outputted to `output/sessionization.txt`
 
+Streaming reads are parsed and read into an unordered hash table. After every read, a hash table pruner and flusher is called which determines if a session has expired based on changes in time. It prunes the hash table and writes to disk.
+
 ## Input file
 
 ### `log.csv`
